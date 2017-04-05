@@ -38,7 +38,14 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message) {
             text = event.message.text
-            sendTextMessage(sender, "Hello, welcome to Ujamaa.")
+            if (text.toUpperCase === 'HELLO') {
+              sendTextMessage(sender, "Hello, welcome to Ujamaa.")
+            }
+        }
+        if (event.postback) {
+            text = JSON.stringify(event.postback.payload)
+            sendTextMessage(sender, "Postback received: "+text.substring(0, 200), token)
+            continue
         }
     }
     res.sendStatus(200)
