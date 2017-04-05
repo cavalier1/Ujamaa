@@ -38,7 +38,7 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message) {
             text = event.message.text
-            if (text === ('hello' || 'Hello')) {
+            if (text.toUpperCase() === 'Hello') {
               sendTextMessage(sender, "Hello, welcome to Ujamaa.")
             }
         }
