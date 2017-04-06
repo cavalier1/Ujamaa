@@ -119,14 +119,12 @@ function askLocation() {
 //Welcome Button
 function welcomeButton() {
     messageData = {
-        "text": "Hello, welcome to Ujamaa. I'm here to help you find a black owned business with the products or services you need.\n\nAre you ready? to get starte?"
-        "buttons":[
-      {
-        "type":"postback",
-        "title":"yes",
-        "payload":"yes"
-      }
-    ]
+        "text": "Hello, welcome to Ujamaa. I'm here to help you find a black owned business with the products or services you need.\n\nAre you ready? to get started?",
+        "buttons":[{
+            "type":"postback",
+            "title":"yes",
+            "payload":"yes"
+      }]
     }
       request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
