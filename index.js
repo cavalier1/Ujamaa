@@ -161,6 +161,9 @@ function askLocation() {
 
 function welcomeButton(recipientId) {
     var messageData = {
+        recipient: {
+            id: recipientId
+        },
         message:{
             attachment:{
                 type:"template",
