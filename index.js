@@ -38,11 +38,11 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message) {
             text = event.message.text
-            if (text === ('hello' || 'Hello')) {
+            //if (text === ('hello' || 'Hello')) {
               sendTextMessage(sender, "Hello, welcome to Ujamaa. I'm here to help you find a black owned business with the products or services you're looking for. Please select a button")
-            }
-            else
-              sendTextMessage(sender, "I'm sorry but I don't understand what you're saying")
+            //}
+            //else
+             // sendTextMessage(sender, "I'm sorry but I don't understand what you're saying")
         }
         if (event.postback) {
             text = JSON.stringify(event.postback.payload)
