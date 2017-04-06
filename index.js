@@ -39,10 +39,12 @@ app.post('/webhook/', function (req, res) {
         if (event.message) {
             text = event.message.text
             //if (text === ('hello' || 'Hello')) {
+            if(text)
               sendTextMessage(sender, "Hello, welcome to Ujamaa. I'm here to help you find a black owned business with the products or services you're looking for. Please select a button")
               askLocation()
                 //continue
             //}
+          }
             else
               sendTextMessage(sender, "I'm sorry but I don't understand what you're saying")
         }
