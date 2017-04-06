@@ -48,8 +48,10 @@ app.post('/webhook/', function (req, res) {
              // askLocation()
             //}
             //}
-            else
+            else {
               sendTextMessage(sender, "I'm sorry but I don't understand what you're saying")
+              continue
+            }
         }
         if (event.postback) {
             text = JSON.stringify(event.postback.payload)
