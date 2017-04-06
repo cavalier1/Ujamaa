@@ -42,7 +42,7 @@ app.post('/webhook/', function (req, res) {
             //if(text)
               sendTextMessage(sender, "Hello, welcome to Ujamaa. I'm here to help you find a black owned business with the products or services you're looking for. Please select a button")
               askLocation()
-                //continue
+              continue
             }
           //}
             else
