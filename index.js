@@ -39,11 +39,14 @@ app.post('/webhook/', function (req, res) {
         if (event.message) {
             text = event.message.text
             if (text === 'Hello') {
-              /*sendTextMessage(sender, "Hello, welcome to Ujamaa. I'm here to help you find a black owned business with the products or services you need.\n\n Are you ready? (say")
-              askLocation()*/
+              //sendTextMessage(sender, "Hello, welcome to Ujamaa. I'm here to help you find a black owned business with the products or services you need.\n\n Are you ready?")
+              //askLocation()
               welcomeButton()
               continue
             }
+            //if (text == 'Ready') {
+             // askLocation()
+            //}
             //}
             //else
              // sendTextMessage(sender, "I'm sorry but I don't understand what you're saying")
@@ -53,8 +56,8 @@ app.post('/webhook/', function (req, res) {
             sendTextMessage(sender, "Postback received: "+text.substring(0, 200), token)
             //if (text === 'yes') {
               //askLocation()
-              continue
-            }
+              //continue
+            //}
             continue
         }
     }
