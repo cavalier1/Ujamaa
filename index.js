@@ -119,12 +119,20 @@ function askLocation() {
 //Welcome Button
 function welcomeButton() {
     messageData = {
-        "text": "Hello, welcome to Ujamaa. I'm here to help you find a black owned business with the products or services you need.\n\nAre you ready? to get started?",
-        "buttons":[{
-            "type":"postback",
-            "title":"yes",
-            "payload":"yes"
-      }]
+        "message":{
+            "attachment":{
+                "type":"template",
+                "payload":{
+                    "template_type":"button",
+                   "text":"Hello, welcome to Ujamaa. I'm here to help you find a black owned business with the products or services you need.\n\nAre you ready? to get started?",
+                    "buttons":[{
+                        "type":"postback",
+                        "title":"yes",
+                        "payload":"yes"
+                    }]
+                }
+            }
+        }
     }
       request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
@@ -142,6 +150,7 @@ function welcomeButton() {
         }
     })
 }
+
 function sendGenericMessage(recipientId) {
   var messageData = {
     recipient: {
