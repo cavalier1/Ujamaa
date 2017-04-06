@@ -43,6 +43,7 @@ app.post('/webhook/', function (req, res) {
               askLocation()*/
               welcomeButton()
               continue
+            }
             //}
             //else
              // sendTextMessage(sender, "I'm sorry but I don't understand what you're saying")
@@ -50,6 +51,10 @@ app.post('/webhook/', function (req, res) {
         if (event.postback) {
             text = JSON.stringify(event.postback.payload)
             sendTextMessage(sender, "Postback received: "+text.substring(0, 200), token)
+            //if (text === 'yes') {
+              //askLocation()
+              continue
+            }
             continue
         }
     }
