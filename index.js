@@ -127,7 +127,7 @@ function welcomeButton() {
                 "type":"template",
                 "payload":{
                     "template_type":"button",*/
-                   "text":"Hello, welcome to Ujamaa. I'm here to help you find a black owned business with the products or services you need.\n\nAre you ready? to get started?",
+                   //"text":"Hello, welcome to Ujamaa. I'm here to help you find a black owned business with the products or services you need.\n\nAre you ready? to get started?",
                     "buttons":[{
                         "type":"postback",
                         "title":"yes",
